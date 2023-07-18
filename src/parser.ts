@@ -1,4 +1,4 @@
-export function extractNumbers(formData) {
+export function extractNumbers(formData: FormData) {
   const num1Input = formData.get("num1");
   const num2Input = formData.get("num2");
 

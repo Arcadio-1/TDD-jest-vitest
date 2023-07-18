@@ -1,17 +1,15 @@
-import { extractNumbers } from "./src/parser.js";
-import {
-  validateStringNotEmpty,
-  validateNumber,
-} from "./src/util/validation.js";
-import { add } from "./src/math.js";
-import { transformToNumber } from "./src/util/numbers.js";
+import { extractNumbers } from "./parser.js";
+import { add } from "./math.js";
+import { validateNumber, validateStringNotEmpty } from "./util/validation.js";
+import { transformToNumber } from "./util/numbers.js";
 console.log("work");
-const form = document.querySelector("form");
-const output = document.getElementById("result");
-console.log("wow");
-function formSubmitHandler(event) {
+const form = document.querySelector("form")!;
+const output = document.getElementById("result")!;
+
+function formSubmitHandler(event: any) {
   event.preventDefault();
-  const formData = new FormData(form);
+
+  const formData: FormData = new FormData(form);
   const numberInputs = extractNumbers(formData);
 
   let result = "";
@@ -25,7 +23,7 @@ function formSubmitHandler(event) {
       numbers.push(number);
     }
     result = add(numbers).toString();
-  } catch (error) {
+  } catch (error: any) {
     result = error.message;
   }
 
