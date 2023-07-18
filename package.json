@@ -10,12 +10,13 @@
     "@jest/globals": "^29.6.1",
     "@types/jest": "^29.5.3",
     "babel-jest": "^29.6.1",
-    "jest": "^29.6.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "test": "jest"
+    "test": "vitest --run --reporter verbose",
+    "test:watch": "vitest",
+    "start": "http-server -c-1"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,9 @@
   "bugs": {
     "url": "https://github.com/Arcadio-1/jest/issues"
   },
-  "homepage": "https://github.com/Arcadio-1/jest#readme"
+  "homepage": "https://github.com/Arcadio-1/jest#readme",
+  "dependencies": {
+    "http-server": "^14.1.0",
+    "vitest": "^0.33.0"
+  }
 }
