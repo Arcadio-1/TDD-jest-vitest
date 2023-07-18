@@ -2,7 +2,7 @@ import { extractNumbers } from "./parser.js";
 import { add } from "./math.js";
 import { validateNumber, validateStringNotEmpty } from "./util/validation.js";
 import { transformToNumber } from "./util/numbers.js";
-console.log("work");
+
 const form = document.querySelector("form")!;
 const output = document.getElementById("result")!;
 
